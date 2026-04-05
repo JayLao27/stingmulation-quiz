@@ -1,10 +1,10 @@
 ﻿"use client";
 
 import { useEffect, useMemo, useState } from "react";
-import firstExam from "../assets/quizzes/first-exam.json";
-import secondExam from "../assets/quizzes/second-exam.json";
-import thirdExam from "../assets/quizzes/third-exam.json";
-import fourthExam from "../assets/quizzes/fourth-exam.json";
+import firstExam from "../assets/first-exam.json";
+import secondExam from "../assets/second-exam.json";
+import thirdExam from "../assets/third-exam.json";
+import fourthExam from "../assets/fourth-exam.json";
 
 type Mode = "quiz" | "review" | "missed";
 type Filter = string | "all";
