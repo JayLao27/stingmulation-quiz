@@ -390,10 +390,17 @@ button {
 }
 
 .mode-toggle,
+.exam-switch,
 .filter-bar,
 .controls {
   display: flex;
   flex-wrap: wrap;
+}
+
+.exam-switch {
+  gap: 8px;
+  margin-bottom: 16px;
+  animation: fadeDown 0.6s 0.12s ease both;
 }
 
 .mode-toggle {
