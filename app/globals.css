@@ -29,7 +29,12 @@ body {
     radial-gradient(circle at bottom right, rgba(255, 107, 53, 0.08), transparent 28%),
     var(--bg);
   color: var(--text);
-  font-family: var(--font-space-mono), monospace;
+  font-family: var(--font-source-sans), "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
@@ -266,6 +271,28 @@ button {
   gap: 20px;
 }
 
+.question-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.question-position {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.question-nav-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.question-nav-actions .btn {
+  min-width: 130px;
+}
+
 .question-card {
   overflow: hidden;
   border: 1px solid var(--border);
@@ -300,7 +327,7 @@ button {
 }
 
 .q-text {
-  font-family: var(--font-dm-serif-display), serif;
+  font-family: var(--font-source-sans), "Segoe UI", sans-serif;
   font-size: 15px;
   line-height: 1.6;
 }
@@ -559,5 +586,19 @@ button {
 
   .controls {
     flex-direction: column;
+  }
+
+  .question-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .question-nav-actions {
+    width: 100%;
+  }
+
+  .question-nav-actions .btn {
+    flex: 1;
+    min-width: 0;
   }
 }

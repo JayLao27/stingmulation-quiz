@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
-import { DM_Serif_Display, Space_Mono } from "next/font/google";
+import { DM_Serif_Display, Poppins, Space_Mono } from "next/font/google";
 import "./globals.css";
+
+const sourceSans = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-source-sans",
+});
 
 const spaceMono = Space_Mono({
   subsets: ["latin"],
@@ -26,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${spaceMono.variable} ${dmSerifDisplay.variable}`}>
+      <body className={`${sourceSans.variable} ${spaceMono.variable} ${dmSerifDisplay.variable}`}>
         {children}
       </body>
     </html>
