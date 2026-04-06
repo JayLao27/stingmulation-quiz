@@ -207,6 +207,33 @@ button {
   animation: fadeDown 0.6s 0.2s ease both;
 }
 
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  animation: fadeDown 0.6s 0.22s ease both;
+}
+
+.search-input {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  background: rgba(17, 24, 39, 0.65);
+  color: var(--text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-input::placeholder {
+  color: var(--muted);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.12);
+}
+
 .controls {
   gap: 12px;
   margin-top: 40px;
@@ -592,6 +619,10 @@ button {
   }
 
   .controls {
+    flex-direction: column;
+  }
+
+  .search-bar {
     flex-direction: column;
   }
 
