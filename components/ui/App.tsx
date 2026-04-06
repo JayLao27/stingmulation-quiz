@@ -55,7 +55,6 @@ function shuffleQuestions(list: Question[]) {
   }
 
   return items;
-
 }
 
 function shuffleQuestionOptions(question: Question): Question {
@@ -108,7 +107,7 @@ export default function App() {
 
   useEffect(() => {
     setState(createInitialState(activeExam.questions));
-    setDisplayOrder(prepareQuestions(activeExam.questions));
+    setDisplayOrder([...activeExam.questions]);
     setMode("quiz");
     setFilter("all");
     setSearchQuery("");
@@ -202,7 +201,7 @@ export default function App() {
 
   function resetAll() {
     setState(createInitialState(activeExam.questions));
-    setDisplayOrder(prepareQuestions(activeExam.questions));
+    setDisplayOrder([...activeExam.questions]);
     setMode("quiz");
     setFilter("all");
     setSearchQuery("");
@@ -211,7 +210,7 @@ export default function App() {
   }
 
   function handleShuffle() {
-    setDisplayOrder(shuffleQuestions(activeExam.questions));
+    setDisplayOrder(prepareQuestions(shuffleQuestions(activeExam.questions)));
     setCurrentQuestionIndex(0);
   }
 
